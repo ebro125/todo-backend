@@ -1,1 +1,1 @@
- Backend of a todo app.l
+ Backend of a simple CRUD todo app.
