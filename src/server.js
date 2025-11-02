@@ -1,12 +1,22 @@
-import express from 'express'
-import dotenv from 'dotenv'
-dotenv.config();
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors'); 
+const path = require('path'); // <-- Added path import
 
+dotenv.config(); 
 const app = express();
+
 const PORT = process.env.PORT;
 
+
+// ...
+
+// In the middleware section:
+// Serve static files (HTML, CSS, JS) from the 'public' folder
+app.use(express.static(path.join(__dirname, '..', 'public')));
 // Middleware to parse JSON request bodies
 app.use(express.json());
+app.use(cors()); 
 
 // --- 1. CORE SERVICE LAYER (BUSINESS LOGIC) ---
 

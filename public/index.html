@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular To-Do Client</title>
+    <!-- 1. Load Tailwind CSS framework -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 2. Link to your custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 sm:p-8">
+    
+    <div class="w-full max-w-lg bg-white shadow-2xl rounded-xl p-8">
+        <h1 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">Modular To-Do App</h1>
+        <p class="text-sm text-center text-gray-500 mb-6">Backend at <code class="bg-gray-100 p-1 rounded">http://localhost:3000</code></p>
+
+        <!-- Status/Error Message Display -->
+        <div id="status-message" class="hidden p-3 mb-4 font-semibold rounded-lg text-sm" role="alert"></div>
+
+        <!-- Task Input Form -->
+        <form id="add-todo-form" class="flex gap-2 mb-8">
+            <input type="text" id="todo-title-input" placeholder="Enter a new task..." required
+                   class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 shadow-sm">
+            <button type="submit"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-150 ease-in-out shadow-md">
+                Add Task
+            </button>
+        </form>
+
+        <!-- To-Do List Container -->
+        <div id="todo-list" class="space-y-3">
+            <!-- Content populated by client.js -->
+            <p class="text-center text-gray-500" id="loading-indicator">Loading tasks...</p>
+        </div>
+
+    </div>
+
+    <!-- 3. Link to your JavaScript file (must be at the end of the body) -->
+    <script src="client.js"></script>
+</body>
+</html>

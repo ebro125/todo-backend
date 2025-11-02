@@ -1,0 +1,26 @@
+/*
+ * style.css
+ * Custom styles for the To-Do application.
+ */
+
+/* Sets a default font for the entire application */
+body {
+    background-color: #3b82f6;
+    font-family: 'Inter', sans-serif;
+    /* Tailwind classes are preferred, but this ensures a fallback */
+}
+
+/* Custom class for list items (can be customized further) */
+.todo-item {
+    border-left: 5px solid #3b82f6; /* Blue border for visual emphasis */
+    padding-left: 1rem !important; /* Ensure content is inside the border */
+}
+
+/* Style for the input and button to give them a modern feel */
+#add-todo-form input[type="text"] {
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+#add-todo-form button {
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
