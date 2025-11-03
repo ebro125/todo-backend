@@ -132,6 +132,7 @@ form.addEventListener('submit', async (e) => {
 });
 
 /** PATCH: Toggles the completion status of a task. */
+//need to make an update button.
 async function handleToggleComplete(id, currentStatus) {
     const newStatus = !currentStatus;
     const url = `${API_URL}/${id}`;
